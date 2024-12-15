@@ -23,3 +23,32 @@
 
 ### Data Query Language
 * SELECT - displays static data or retrieves data from a table, based on certain parameters
+
+### Numeric data types
+<img width="587" alt="Screenshot 2024-12-15 at 5 20 44 PM" src="https://github.com/user-attachments/assets/a34b3637-e14e-436a-bf8d-2e1ac8d9bd85" />
+
+
+------------------------
+
+
+
+```
+create database studentdemo;
+```
+```
+use studentdemo;
+```
+```
+create table Student
+(
+    StudentID      CHAR (4),
+    StudentName VARCHAR (30),
+    grade       CHAR(1),
+    age         INT,
+    course      VARCHAR(50),
+    PRIMARY KEY (StudentID)
+);
+```
+
+
+---------------------
