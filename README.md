@@ -1,3 +1,94 @@
+```
+create database MovieDatabase;
+
+use MovieDatabase;
+
+create table Movies (
+    -> Title varchar(100) not null,
+    -> Runtime int not null,
+    -> Genre varchar(50) not null,
+    -> IMDB_Score decimal(3,1) not null,
+    -> Rating varchar(10) not null
+    -> );
+
+
+insert into Movies (Title, Runtime, Genre, IMDB_Score, Rating)
+    -> values 
+    ->     ('Howard the Duck', 110, 'Sci-Fi', 4.6, 'PG'),
+    ->     ('Lavalantula', 83, 'Horror', 4.7, 'TV-14'),
+    ->     ('Starship Troopers', 129, 'Sci-Fi', 7.2, 'PG-13'),
+    ->     ('Waltz With Bashir', 90, 'Documentary', 8.0, 'R'),
+    ->     ('Spaceballs', 96, 'Comedy', 7.1, 'PG'),
+    ->     ('Monsters Inc.', 92, 'Animation', 8.1, 'G');
+
+
+
+desc Movies;
++------------+--------------+------+-----+---------+-------+
+| Field      | Type         | Null | Key | Default | Extra |
++------------+--------------+------+-----+---------+-------+
+| Title      | varchar(100) | NO   |     | NULL    |       |
+| Runtime    | int          | NO   |     | NULL    |       |
+| Genre      | varchar(50)  | NO   |     | NULL    |       |
+| IMDB_Score | decimal(3,1) | NO   |     | NULL    |       |
+| Rating     | varchar(10)  | NO   |     | NULL    |       |
++------------+--------------+------+-----+---------+-------+
+
+
+
+
+select * from Movies;
++-------------------+---------+-------------+------------+--------+
+| Title             | Runtime | Genre       | IMDB_Score | Rating |
++-------------------+---------+-------------+------------+--------+
+| Howard the Duck   |     110 | Sci-Fi      |        4.6 | PG     |
+| Lavalantula       |      83 | Horror      |        4.7 | TV-14  |
+| Starship Troopers |     129 | Sci-Fi      |        7.2 | PG-13  |
+| Waltz With Bashir |      90 | Documentary |        8.0 | R      |
+| Spaceballs        |      96 | Comedy      |        7.1 | PG     |
+| Monsters Inc.     |      92 | Animation   |        8.1 | G      |
++-------------------+---------+-------------+------------+--------+
+
+
+
+
+insert into Movies (Title, Runtime, Genre, IMDB_Score, Rating) values
+    -> ('Harry Potter', 152, 'Fantasy', 7.6, 'PG'),
+    -> ('Butterfly Effect', 113, 'Sci-Fi', 7.6, 'R'),
+    -> ('Star Wars', 121, 'Sci-Fi', 8.6, 'PG');
+
+
+
+select * from Movies;
++-------------------+---------+-------------+------------+--------+
+| Title             | Runtime | Genre       | IMDB_Score | Rating |
++-------------------+---------+-------------+------------+--------+
+| Howard the Duck   |     110 | Sci-Fi      |        4.6 | PG     |
+| Lavalantula       |      83 | Horror      |        4.7 | TV-14  |
+| Starship Troopers |     129 | Sci-Fi      |        7.2 | PG-13  |
+| Waltz With Bashir |      90 | Documentary |        8.0 | R      |
+| Spaceballs        |      96 | Comedy      |        7.1 | PG     |
+| Monsters Inc.     |      92 | Animation   |        8.1 | G      |
+| Harry Potter      |     152 | Fantasy     |        7.6 | PG     |
+| Butterfly Effect  |     113 | Sci-Fi      |        7.6 | R      |
+| Star Wars         |     121 | Sci-Fi      |        8.6 | PG     |
++-------------------+---------+-------------+------------+--------+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ### Data Definition Language 
 * CREATE - creates a new database or a new table
 * ALTER - Modifies the structure of a database or a table
